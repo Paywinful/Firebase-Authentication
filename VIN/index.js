@@ -9,7 +9,7 @@
 
  // Your web app's Firebase configuration
 
- // when you want to use it copy your firebaseConfig and replace this(Brandon)
+
  const firebaseConfig = {
    apiKey: "AIzaSyCv09JGWi0DaDualOwaTSqC2Jq9FjNIkpg",
    authDomain: "authentication-app-53da2.firebaseapp.com",
@@ -26,7 +26,6 @@
  const auth = getAuth();
 
 
-// Make sure your signup button has an id of signup(Brandon)
  signup.addEventListener('click', (e) =>{
  
  var email = document.getElementById('email').value
@@ -40,7 +39,6 @@
    // Signed in 
    const user = userCredential.user;
    set(ref(database, 'users/' + user.uid), {
-    // These are the things that are going to enter the database so edit what you want to be in the database and remove what you dont want(Brandon)
      firstname: firstname,
      lastname: lastname,
      phonenumber: phonenumber,
@@ -51,7 +49,6 @@
  .then(() => {
      // Data saved successfully!
      alert('User Created');
-     //After registration of user choose what page you would like to go next(Brandon)
      window.location.href = "login.html";
  })
  .catch((error) => {
